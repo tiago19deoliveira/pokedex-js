@@ -10,6 +10,11 @@
   margin: 0;
 }
 
+body {
+  display: block;
+  margin: 8px;
+}
+
 ol.pokemons {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -19,10 +24,15 @@ ol.pokemons {
 }
 
 ol.pokemons li {
+  flex-direction: column;
   margin: 0.5rem;
-  padding: 2rem 1rem;
+  padding: 1rem;
   background-color: #14a06f;
-  height: 100px;
   color: #fff;
   border-radius: 1rem;
+}
+
+ol.pokemons li img {
+  max-width: 100%;
+  height: 100%;
 }
