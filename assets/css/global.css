@@ -38,11 +38,19 @@ body {
   color: black;
   text-align: right;
   opacity: 0.3;
+  font-size: 0.625rem;
+}
+
+.pokemon .name {
+  color: #fff;
+  margin-bottom: 0.25rem;
 }
 
 .pokemon .detail {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .pokemon .detail .types {
@@ -55,10 +63,13 @@ body {
   background-color: #61e1ca;
   color: #fff;
   padding: 0.25rem 0.5rem;
-  font-size: 0.85rem;
+  margin: 0.25rem 0;
+  font-size: 0.625rem;
+
+  border-radius: 1rem;
 }
 
 .pokemon .detail img {
   max-width: 100%;
-  height: 100%;
+  height: 70px;
 }
