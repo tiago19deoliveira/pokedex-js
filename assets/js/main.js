@@ -30,26 +30,15 @@ function convertPokemonList(pokemon) {
 const pokemonList = document.getElementById('pokemonList')
 
 fetch(url)
-    .then((response) => {
-    return response.json()
+  .then(response => response.json())
 
+  .then(jsonBody => jsonBody.results)
 
-    .then((jsonBody) => {
-    console.log(jsonBody)
+  .then(pokemonList => {
+    for (let i = 0; i < pokemonList.length; i++) {
+      const pokemon = pokemonList[i]
+      pokemonList.innerHTML += convertPokemonList(pokemon)
+    }
+  })
 
-
-    .then((pokemonList) => {
-
-      for (let i = 0; i < pokemonList.length; i++) {
-        const pokemon = pokemonList[i]
-        pokemonList.innerHTML += convertPokemonList(pokemon)
-      
-      }
-
-
-    })
-
-
- .catch((error) => console.error(error))
-
-
+  .catch(error => console.error(error))
